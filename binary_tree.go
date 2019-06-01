@@ -10,6 +10,13 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+/*
+https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/65226/My-Java-Solution-which-is-easy-to-understand
+another way:
+if both p and q exist in Tree rooted at root, then return their LCA
+if neither p and q exist in Tree rooted at root, then return null
+if only one of p or q (NOT both of them), exists in Tree rooted at root, return it)
+*/
 func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	pa, qa := findAncestor(root, p, q)
 	if pa == qa {
