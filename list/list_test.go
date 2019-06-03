@@ -3,7 +3,7 @@ package list
 import "testing"
 
 func TestBuildList(t *testing.T) {
-	Head := buildList([]int{2,3,1,2,3})
+	Head := buildList([]int{2, 3, 1, 2, 3})
 	t.Log(Head, to_slice(Head))
 }
 

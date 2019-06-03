@@ -17,7 +17,7 @@ if both p and q exist in Tree rooted at root, then return their LCA
 if neither p and q exist in Tree rooted at root, then return null
 if only one of p or q (NOT both of them), exists in Tree rooted at root, return it)
 */
-func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
+func LowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	pa, qa := findAncestor(root, p, q)
 	if pa == qa {
 		return pa
@@ -48,7 +48,7 @@ func findAncestor(root, p, q *TreeNode) (pa, qa *TreeNode) {
 	return pa, qa
 }
 
-func buildTree(s []string) *TreeNode {
+func BuildTree(s []string) *TreeNode {
 	if len(s) == 0 || s[0] == "nil" {
 		return nil
 	}
@@ -77,7 +77,7 @@ func buildTree(s []string) *TreeNode {
 	return root
 }
 
-func toSlice(root *TreeNode) []string {
+func ToSlice(root *TreeNode) []string {
 	if root == nil {
 		return nil
 	}
