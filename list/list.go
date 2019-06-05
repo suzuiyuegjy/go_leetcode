@@ -5,7 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func buildList(s []int) *ListNode {
+func BuildList(s []int) *ListNode {
 	var head *ListNode
 	var last *ListNode
 	for i, v := range s {
@@ -21,7 +21,7 @@ func buildList(s []int) *ListNode {
 	return head
 }
 
-func to_slice(head *ListNode) []int {
+func ToSlice(head *ListNode) []int {
 	var s []int
 	for head != nil {
 		s = append(s, head.Val)
@@ -35,7 +35,7 @@ slow:one step
 fast:two step
 reverse first part of list, then compare with last part
 */
-func isPalindrome(head *ListNode) bool {
+func IsPalindrome(head *ListNode) bool {
 	if head == nil {
 		return true
 	}
@@ -53,7 +53,7 @@ func isPalindrome(head *ListNode) bool {
 	return true
 }
 
-func isPalindrome2(head *ListNode) bool {
+func IsPalindrome2(head *ListNode) bool {
 	if head == nil || head.Next == nil {
 		return true
 	}

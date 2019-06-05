@@ -1,19 +1,30 @@
-package list
+package list_test
 
-import "testing"
+import (
+	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/gomega"
 
-func TestBuildList(t *testing.T) {
-	Head := buildList([]int{2, 3, 1, 2, 3})
-	t.Log(Head, to_slice(Head))
-}
+	. "github.com/suzuiyuegjy/go_leetcode/list"
+)
 
-func TestIsPalindrome(t *testing.T) {
-	Node4 := ListNode{1, nil}
-	Node3 := ListNode{2, &Node4}
-	Node2 := ListNode{2, &Node3}
-	Node1 := ListNode{1, &Node2}
-	Node := ListNode{1, &Node1}
-	if isPalindrome2(&Node) == true {
-		t.Error("error")
-	}
-}
+var _ = Describe("List", func() {
+	Describe("Build List", func(){
+		Context("normal", func(){
+			It("should be", func(){
+				s := []int{2, 3, 1, 2, 3}
+				L := BuildList(s)
+				Expect(ToSlice(L)).To(Equal(s))
+			})
+		})
+	})
+
+	Describe("Is List Palindrome", func(){
+		Context("When List is Normal", func(){
+			It("it is palindrome", func(){
+				s := []int{1,2,3,2,1}
+				L := BuildList(s)
+				Expect(IsPalindrome2(L)).To(Equal(true))
+			})
+		})
+	})
+})
