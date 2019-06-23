@@ -80,3 +80,10 @@ func IsPalindrome2(head *ListNode) bool {
 	}
 	return true
 }
+
+// param is the node to be delete
+// node is not the tail
+func deleteNode(node *ListNode) {
+	node.Next = nextNode.Next
+	return
+}

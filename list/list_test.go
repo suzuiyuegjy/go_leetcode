@@ -8,9 +8,9 @@ import (
 )
 
 var _ = Describe("List", func() {
-	Describe("Build List", func(){
-		Context("normal", func(){
-			It("should be", func(){
+	Describe("Build List", func() {
+		Context("normal", func() {
+			It("should be", func() {
 				s := []int{2, 3, 1, 2, 3}
 				L := BuildList(s)
 				Expect(ToSlice(L)).To(Equal(s))
@@ -18,13 +18,14 @@ var _ = Describe("List", func() {
 		})
 	})
 
-	Describe("Is List Palindrome", func(){
-		Context("When List is Normal", func(){
-			It("it is palindrome", func(){
-				s := []int{1,2,3,2,1}
+	Describe("Is List Palindrome", func() {
+		Context("When List is Normal", func() {
+			It("it is palindrome", func() {
+				s := []int{1, 2, 3, 2, 1}
 				L := BuildList(s)
 				Expect(IsPalindrome2(L)).To(Equal(true))
 			})
 		})
 	})
+
 })
